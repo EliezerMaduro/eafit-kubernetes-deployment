@@ -46,3 +46,4 @@ jobs:
           context: .
           push: true
           tags: ${{ env.GCP_REGISTRY }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_REPOSITORY }}/${{ env.APP_NAME }}:${{ env.IMAGE_TAG }}
+          
