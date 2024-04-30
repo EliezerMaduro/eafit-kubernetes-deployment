@@ -24,8 +24,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # environment: 
-    #   name: ${{ github.ref_name }}
+    environment: 
+      name: ${{ github.ref_name }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -46,4 +46,3 @@ jobs:
           context: .
           push: true
           tags: ${{ env.GCP_REGISTRY }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_REPOSITORY }}/${{ env.APP_NAME }}:${{ env.IMAGE_TAG }}
-          
